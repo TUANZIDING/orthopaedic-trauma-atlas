@@ -1,0 +1,62 @@
+{
+  "scope": "Numerical centerline-versus-surface display consistency only. Does not verify full screw radius, bone density, patient safety, or clinical suitability. Coordinates are not clinical measurements.",
+  "source_commit": "1c38bf35c254a891200d3cedecfd57abebe83d8d",
+  "meshes": 6,
+  "triangles": 12396,
+  "results": [
+    {
+      "technique": "sa",
+      "side": "left",
+      "pin": 1,
+      "entry_surface_offset_mm": -0.0,
+      "displayed_segment_length_mm": 99.842,
+      "next_surface_distance_mm": 127.053,
+      "centerline_inside_after_entry": true
+    },
+    {
+      "technique": "ic",
+      "side": "left",
+      "pin": 1,
+      "entry_surface_offset_mm": 0.0,
+      "displayed_segment_length_mm": 69.877,
+      "next_surface_distance_mm": 79.727,
+      "centerline_inside_after_entry": true
+    },
+    {
+      "technique": "ic",
+      "side": "left",
+      "pin": 2,
+      "entry_surface_offset_mm": 0.066,
+      "displayed_segment_length_mm": 70.68,
+      "next_surface_distance_mm": 114.614,
+      "centerline_inside_after_entry": true
+    },
+    {
+      "technique": "sa",
+      "side": "right",
+      "pin": 1,
+      "entry_surface_offset_mm": 0.49,
+      "displayed_segment_length_mm": 99.842,
+      "next_surface_distance_mm": 126.355,
+      "centerline_inside_after_entry": true
+    },
+    {
+      "technique": "ic",
+      "side": "right",
+      "pin": 1,
+      "entry_surface_offset_mm": 0.363,
+      "displayed_segment_length_mm": 69.877,
+      "next_surface_distance_mm": 78.991,
+      "centerline_inside_after_entry": true
+    },
+    {
+      "technique": "ic",
+      "side": "right",
+      "pin": 2,
+      "entry_surface_offset_mm": 0.027,
+      "displayed_segment_length_mm": 70.68,
+      "next_surface_distance_mm": 114.485,
+      "centerline_inside_after_entry": true
+    }
+  ]
+}

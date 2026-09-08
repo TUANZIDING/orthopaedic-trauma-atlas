@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-08",
+  "browser": "152.0.7977.82",
+  "checks": [
+    "sa: all 6 lesson steps",
+    "sa: all 4 camera presets",
+    "ic: all 6 lesson steps",
+    "ic: all 4 camera presets",
+    "all visibility switches",
+    "opacity slider",
+    "sources dialog and Escape",
+    "bone selection through canvas pointer",
+    "timed step playback and pause",
+    "4 PNG files downloaded by the export button, each 3840 × 2160",
+    "responsive layout: 390, 320, 844 px without document horizontal overflow",
+    "file:// standalone HTML, HTTP(S) blocked, no remote requests",
+    "no uncaught browser errors or remote runtime requests"
+  ],
+  "errors": [],
+  "remoteRuntimeRequests": []
+}
