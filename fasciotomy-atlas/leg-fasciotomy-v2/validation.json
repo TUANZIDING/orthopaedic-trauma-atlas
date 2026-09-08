@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-08",
+  "checks": [
+    "zh: 4 exposure states, left-side geometry, 4K exports",
+    "en: 4 exposure states, left-side geometry, 4K exports",
+    "Occluded fragments: 5151 changed pixels at 18% vs 0%",
+    "Mesh-derived section changes at different levels",
+    "Layer toggle, reset, actual download event",
+    "390px mobile: no horizontal overflow"
+  ],
+  "errors": [],
+  "scope": "Software and source-coordinate checks only; no independent clinical sign-off"
+}
