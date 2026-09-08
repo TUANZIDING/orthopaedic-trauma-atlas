@@ -24,7 +24,7 @@ Bone-occluded segments fade to approximately 20% opacity, with matching faded ma
 - teaching-images：中英文A/B两个观察视角，3840×2160 PNG。
 - validation-v2.json：离线、开关、语言、结构解释与移动布局的软件检查。
 
-将本目录文件上传至单独GitHub仓库根目录，Settings → Pages → main → /(root)。保留署名与许可文件。本次没有上传或修改远端仓库。
+本模块发布在完整图谱的 `neurovascular-v2/pelvic-external-fixation/` 路径下；保留署名与许可文件。
 
 ## 新增依据
 
