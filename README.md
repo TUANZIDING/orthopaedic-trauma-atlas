@@ -17,7 +17,7 @@
 
 ## 上传 GitHub Pages
 
-建议在新仓库中放置本教学模块，避免覆盖 human-atlas 原有首页。
+本仓库已包含原版骨盆外固定页面和神经血管警示更新；两个版本分别位于根目录与 `neurovascular-v2/`。
 
 1. 在自己的 GitHub 新建一个仓库，例如 `pelvic-external-fixation`。
 2. 上传本包中的 `index.html` 到仓库根目录。也可同时上传 README、ATTRIBUTION、LICENSE、THIRD_PARTY_LICENSES 及教学图文件夹；单个 HTML 已含必要的运行内容及署名。
@@ -25,7 +25,7 @@
 4. Source 选择 **Deploy from a branch**，分支选择保存文件的分支（通常是 `main`），文件夹选择 **/(root)**，点击 Save。
 5. 等待 GitHub 的 Pages 部署完成，以 Pages 设置页实际显示的链接为准。
 
-采用上述示例仓库名和用户名，地址通常为 `https://TUANZIDING.github.io/pelvic-external-fixation/`；这是预期地址，交付时尚未发布。
+当前 GitHub Pages 地址为 `https://tuanziding.github.io/pelvic-external-fixation/`；神经血管警示合集入口为 `https://tuanziding.github.io/pelvic-external-fixation/neurovascular-v2/`。
 
 [GitHub 官方配置说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。GitHub Free 的公开仓库支持 Pages，其他可用范围以账户方案为准。
 
