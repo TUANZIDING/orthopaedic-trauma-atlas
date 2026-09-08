@@ -2,6 +2,8 @@
 
 基于 [human-atlas](https://github.com/TUANZIDING/human-atlas) 的 BodyParts3D 解剖网格，以 [AO Surgery Reference](https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/pelvic-ring/basic-technique/external-fixation) 为术式参考制作的独立教学网页。
 
+最新的神经血管警示更新（V2.1）已上传至 [`neurovascular-v2/`](neurovascular-v2/)；[直接打开合集教学入口](neurovascular-v2/index.html)。四个模块均支持骨后结构淡化显示和中英文切换。
+
 **直接打开 `index.html` 即可使用；模型、样式和三维运行代码全部嵌入单个 HTML，无需联网加载 CDN，无需安装 Node。** 需要浏览器支持 WebGL；外部来源链接需联网访问。
 
 ## 内容
