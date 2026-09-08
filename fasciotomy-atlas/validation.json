@@ -1,0 +1,53 @@
+[
+  {
+    "id": "leg",
+    "offline": true,
+    "stages": 6,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "png": 12,
+    "svg": 12,
+    "pngSize": [
+      3840,
+      2160
+    ],
+    "mobileOverflow": false,
+    "errors": []
+  },
+  {
+    "id": "thigh",
+    "offline": true,
+    "stages": 6,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "png": 12,
+    "svg": 12,
+    "pngSize": [
+      3840,
+      2160
+    ],
+    "mobileOverflow": false,
+    "errors": []
+  },
+  {
+    "id": "foot",
+    "offline": true,
+    "stages": 6,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "png": 12,
+    "svg": 12,
+    "pngSize": [
+      3840,
+      2160
+    ],
+    "mobileOverflow": false,
+    "errors": []
+  }
+]
