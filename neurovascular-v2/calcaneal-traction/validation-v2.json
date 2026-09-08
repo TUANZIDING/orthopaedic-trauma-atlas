@@ -1,0 +1,12 @@
+{
+  "id": "calcaneal",
+  "n": 6,
+  "errors": [],
+  "offline": true,
+  "plates": 4,
+  "dimensions": [
+    3840,
+    2160
+  ],
+  "scope": "Software checks only; not patient-level anatomical validation"
+}

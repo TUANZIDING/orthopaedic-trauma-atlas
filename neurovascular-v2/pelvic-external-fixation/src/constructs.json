@@ -1,0 +1,5 @@
+{
+  "scope": "Teaching-only centerlines in the reference model; mm, x=patient left, y=cranial, z=anterior. Not patient planning parameters.",
+  "sa": [{"entry":[105.925,2.047,13.870],"end":[58.313,32.063,-68.596],"extension":100}],
+  "ic": [{"entry":[132.439,63.295,27.418],"end":[111,0,7],"extension":50},{"entry":[140.556,79.142,7.180],"end":[109,16,3.571],"extension":50}]
+}
