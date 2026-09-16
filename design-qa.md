@@ -12,6 +12,9 @@ Public root homepage redesign based on selected direction 1: a teacher-facing te
 - [x] Each case card includes bounded teaching copy and a source or module-evidence link.
 - [x] Chinese/English toggle updates visible copy and document language.
 - [x] All homepage images loaded with non-zero natural dimensions.
+- [x] AI-generated homepage visual guides are stored under `assets/home/` and labeled as schematic/non-clinical visuals.
+- [x] The hero keeps a real lower-leg teaching screenshot as the primary content proof, with the generated visual used only as spatial orientation.
+- [x] The classroom section adds a generated teacher-kit illustration without replacing source-backed case content.
 - [x] Internal homepage links returned HTTP 200 from the local server.
 - [x] Desktop screenshot reviewed at 1440px in Chinese state.
 - [x] Mobile screenshot reviewed at 390px; no horizontal page overflow.
@@ -28,10 +31,11 @@ Homepage summaries are constrained to the existing module evidence files and pub
 - Root Chinese screenshot: `/tmp/atlas-root-redesign-zh.png`
 - Root English screenshot: `/tmp/atlas-root-redesign-en.png`
 - Root mobile screenshot: `/tmp/atlas-root-redesign-mobile.png`
+- Imagegen-enhanced root screenshots: `/tmp/atlas-root-imagegen-zh.png`, `/tmp/atlas-root-imagegen-mobile.png`
 - Local root server: `http://127.0.0.1:8080/`
 
 ## Result
 
 final result: passed
 
-Remaining P3 polish: the existing module pages keep their own mature interaction layouts; this release unifies the public root entry and case cards first. A later pass can harmonize each module's internal header and lesson metadata without changing the current medical scope.
+Remaining P3 polish: the existing module pages keep their own mature interaction layouts; this release unifies the public root entry, case cards and visual guides first. A later pass can harmonize each module's internal header and lesson metadata without changing the current medical scope.

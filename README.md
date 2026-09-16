@@ -27,6 +27,15 @@
 
 每个模块尽量保留：中文/English 切换、步骤或阶段、结构图层、神经血管提示、4K 教学图、来源文件和使用边界。首页文案只引用模块已有证据文件和公开权威来源，不把示意结构或软件验证写成临床认证。
 
+## 首页视觉素材
+
+首页新增两张 AI 生成的视觉导览图，分别用于首屏空间关系引导和“教师课堂”场景展示：
+
+- `assets/home/hero-layered-anatomy-v1.png`：分层小腿与神经血管关系的非比例视觉导览。
+- `assets/home/teacher-classroom-v1.png`：教师备课与课堂演示场景的编辑插图。
+
+这些图片只承担视觉引导和信息分区，不是患者影像、临床摄影或可测量的解剖图。医学教学内容仍以各模块的真实教学截图、公开来源和证据边界为准。
+
 ## 依据与边界
 
 - 成人急性筋膜室综合征： [AAOS 2025 CPG](https://www.aaos.org/acscpg2025)、[BOASt 10](https://www.boa.ac.uk/resource/boast-10-pdf.html)、[AO 小腿](https://surgeryreference.aofoundation.org/cmf/reconstruction/further-reading/compartment-syndrome-in-the-leg)、[AO 大腿](https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/further-reading/compartment-syndrome-thigh)、[AO 足部](https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/further-reading/compartment-syndrome-foot)。
