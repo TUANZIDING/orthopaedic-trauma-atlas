@@ -15,6 +15,7 @@ Public root homepage redesign based on selected direction 1: a teacher-facing te
 - [x] AI-generated homepage visual guides are stored under `assets/home/` and labeled as schematic/non-clinical visuals.
 - [x] The hero keeps a real lower-leg teaching screenshot as the primary content proof, with the generated visual used only as spatial orientation.
 - [x] The classroom section adds a generated teacher-kit illustration without replacing source-backed case content.
+- [x] README top section now pairs a labeled AI lecture-scene guide with the real lower-leg teaching screenshot.
 - [x] Internal homepage links returned HTTP 200 from the local server.
 - [x] Desktop screenshot reviewed at 1440px in Chinese state.
 - [x] Mobile screenshot reviewed at 390px; no horizontal page overflow.
@@ -32,6 +33,7 @@ Homepage summaries are constrained to the existing module evidence files and pub
 - Root English screenshot: `/tmp/atlas-root-redesign-en.png`
 - Root mobile screenshot: `/tmp/atlas-root-redesign-mobile.png`
 - Imagegen-enhanced root screenshots: `/tmp/atlas-root-imagegen-zh.png`, `/tmp/atlas-root-imagegen-mobile.png`
+- README visual asset: `assets/home/teacher-lecture-v1.png`
 - Local root server: `http://127.0.0.1:8080/`
 
 ## Result

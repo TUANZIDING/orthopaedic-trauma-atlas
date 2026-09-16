@@ -2,6 +2,16 @@
 
 面向医学教师的中英双语骨科创伤教学项目。首页以“识别解剖 → 选择入路 → 神经血管风险 → 复核与边界”为统一讲授路径，串联三维参考解剖、分步教学图、来源链接和使用限制。
 
+<div align="center">
+  <img src="assets/home/teacher-lecture-v1.png" alt="AI 生成的骨科创伤课堂授课场景示意图" width="100%">
+  <p><sub>授课场景导览 · AI 生成的课堂示意，不代表真实拍摄或特定机构。</sub></p>
+</div>
+
+<div align="center">
+  <img src="fasciotomy-atlas/leg-fasciotomy-v2/teaching-images/leg-v2-zh-stage-3-4k.png" alt="小腿筋膜室三维分层真实教学图" width="92%">
+  <p><sub>真实教学图 · 小腿筋膜室三维分层、横断面与神经血管关系。</sub></p>
+</div>
+
 ## 在线访问
 
 - [图谱主页](https://tuanziding.github.io/orthopaedic-trauma-atlas/)
@@ -33,8 +43,9 @@
 
 - `assets/home/hero-layered-anatomy-v1.png`：分层小腿与神经血管关系的非比例视觉导览。
 - `assets/home/teacher-classroom-v1.png`：教师备课与课堂演示场景的编辑插图。
+- `assets/home/teacher-lecture-v1.png`：README 顶部使用的授课场景导览图。
 
-这些图片只承担视觉引导和信息分区，不是患者影像、临床摄影或可测量的解剖图。医学教学内容仍以各模块的真实教学截图、公开来源和证据边界为准。
+AI 生成的场景图只承担视觉引导和信息分区，不是患者影像、临床摄影或可测量的解剖图。医学教学内容仍以各模块的真实教学截图、公开来源和证据边界为准。
 
 ## 依据与边界
 
