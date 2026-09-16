@@ -1,5 +1,180 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>下肢筋膜室切开 · Fasciotomy Atlas</title><style>*{box-sizing:border-box}body{margin:0;background:#f2f4ec;color:#1b4038;font:16px/1.8 system-ui,-apple-system,sans-serif}header,main,footer{max-width:1450px;margin:auto;padding:30px 5vw}header{display:flex;justify-content:space-between;border-bottom:1px solid #cfd8ca}a{color:inherit}h1{font-size:clamp(32px,4.5vw,65px);line-height:1.15;margin:28px 0}h2{font-size:24px}.lead{max-width:900px;color:#5d7062}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:40px 0}.card{background:#fffdf6;border:1px solid #d6ddce;border-radius:12px;overflow:hidden}.card img{width:100%;display:block}.body{padding:22px}.badge{font-size:12px;color:#91762b}button,.button{display:inline-block;background:#234f43;color:#fff;border:0;padding:10px 15px;border-radius:5px;text-decoration:none;cursor:pointer;font:inherit}.notice{padding:25px;background:#e7ecdf;border-left:4px solid #be9649}.meta{font-size:13px}.en{font-size:14px;color:#657665}footer{font-size:12px;color:#657665}@media(max-width:900px){.grid{grid-template-columns:1fr}} </style></head><body><header><a href="https://tuanziding.github.io/orthopaedic-trauma-atlas/">ORTHOPAEDIC TRAUMA ATLAS</a><span>V1.0 · 2026-09-08</span></header><main><p>FASCIOTOMY / LAYERED TEACHING</p><h1>下肢骨筋膜室<br>切开减压教学图谱</h1><p class="en">Lower-limb fasciotomy · layered procedural atlas</p><p class="lead">三个部位分别制作：小腿为主演示，大腿与足部独立成页。每页包含分步入路、横断面、神经血管风险、参数及解释；中英双语、离线使用、4K PNG 与 SVG 导出。</p><p class="en">Three standalone bilingual HTML modules with layered schematics, cross-sections, neurovascular warnings, source-linked parameters and 4K/vector export.</p><div class="grid">
-<article class="card"><img src="leg-fasciotomy/teaching-images/leg-zh-step-5-4k.png" alt="小腿四筋膜室原创示意"><div class="body"><span class="badge">01 · 主演示 / PRIMARY</span><h2>小腿四筋膜室</h2><p class="en">Four-compartment leg fasciotomy</p><p>双切口，前室、外侧室、浅后室及深后室逐室检查。</p><a class="button" href="leg-fasciotomy/index.html">中文</a> <a class="button" href="leg-fasciotomy/index.html?lang=en">English</a><p><a class="button" href="leg-fasciotomy-v2/index.html">V2 三维分层样版 / 3D pilot</a></p><p class="en">固定左侧 · 深后室显露 · 神经血管遮挡透视 · 待临床复核</p><p><a href="downloads/leg-fasciotomy.zip" download>下载二维独立包 / 2D ZIP</a></p></div></article>
-<article class="card"><img src="thigh-fasciotomy/teaching-images/thigh-zh-step-5-4k.png" alt="大腿三筋膜室原创示意"><div class="body"><span class="badge">02 · 三室 / THREE COMPARTMENTS</span><h2>大腿筋膜室</h2><p class="en">Thigh compartment fasciotomy</p><p>阔筋膜、外侧肌间隔与内侧收肌室分别展示。</p><a class="button" href="thigh-fasciotomy/index.html">中文</a> <a class="button" href="thigh-fasciotomy/index.html?lang=en">English</a><p><a href="downloads/thigh-fasciotomy.zip" download>下载独立包 / ZIP</a></p></div></article>
-<article class="card"><img src="foot-fasciotomy/teaching-images/foot-zh-step-5-4k.png" alt="足部前足与后足分层原创示意"><div class="body"><span class="badge">03 · 争议提示 / CONTROVERSY</span><h2>足部筋膜室</h2><p class="en">Foot compartment fasciotomy</p><p>前足和跟骨室分别展示；足背、内侧及外侧入路。</p><a class="button" href="foot-fasciotomy/index.html">中文</a> <a class="button" href="foot-fasciotomy/index.html?lang=en">English</a><p><a href="downloads/foot-fasciotomy.zip" download>下载独立包 / ZIP</a></p></div></article></div>
-<div class="notice">足部管理尚无统一共识，示意图不能视为所有足部损伤的固定手术处方。<br><span class="en">Foot compartment syndrome management lacks consensus; these drawings are not a universal operative prescription.</span></div><p class="meta">本系列针对成人急性筋膜室综合征，非慢性运动性疾病。原创二维关系示意，非比例三维分割、非手术导航；依据 AAOS 2025、BOASt 2025 与 AO 入路说明独立编制。</p><p class="meta"><a href="research/EVIDENCE.md">来源与证据边界 / Evidence</a> · <a href="README.md">开发维护 / Maintenance</a></p></main><footer>36 张 3840×2160 PNG + 36 张 SVG · Three standalone HTML modules · 本地制作版，未声明远端发布</footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向医学教师的下肢筋膜室三维分层与分步教学图谱。">
+  <title>下肢骨筋膜室 · 教学图谱</title>
+  <style>
+    :root {
+      --ink: #143f37;
+      --ink-soft: #355a50;
+      --muted: #60776f;
+      --paper: #f5f6f0;
+      --card: #fffdf7;
+      --line: #d6dfd4;
+      --accent: #c28e2b;
+      --accent-soft: #eee3c9;
+      --green-soft: #e7eee5;
+      --shadow: 0 16px 40px rgba(20, 63, 55, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 15px/1.7 ui-sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
+    a { color: inherit; text-underline-offset: 4px; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; }
+    .site-header { max-width: 1440px; margin: 0 auto; padding: 22px 5vw 18px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 12px; letter-spacing: .16em; line-height: 1.35; text-decoration: none; white-space: nowrap; }
+    .brand strong { display: block; font-weight: 750; }
+    .brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: .08em; }
+    .site-nav { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+    .site-nav a { color: var(--ink-soft); font-size: 13px; text-decoration: none; }
+    .site-nav a:hover { color: var(--ink); }
+    .language-toggle { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 7px 13px; font-size: 12px; }
+    .language-toggle:hover, .language-toggle:focus-visible { border-color: var(--ink); }
+    main { max-width: 1440px; margin: 0 auto; padding: 0 5vw 64px; }
+    .hero { display: grid; grid-template-columns: minmax(0, .9fr) minmax(480px, 1.1fr); align-items: center; gap: clamp(30px, 5vw, 80px); padding: 70px 0 58px; }
+    .eyebrow { margin: 0 0 14px; color: var(--accent); font-size: 11px; font-weight: 750; letter-spacing: .17em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 630px; margin-bottom: 18px; font-size: clamp(42px, 5.2vw, 76px); line-height: 1.1; letter-spacing: -.055em; }
+    .hero-subtitle { margin-bottom: 20px; color: var(--ink-soft); font-size: 18px; }
+    .hero-copy { max-width: 630px; margin-bottom: 28px; color: var(--muted); font-size: 16px; }
+    .hero-copy .en { display: block; margin-top: 6px; font-size: 13px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 10px 21px; border: 1px solid var(--ink); border-radius: 7px; background: var(--ink); color: #fffdf7; font-weight: 700; text-decoration: none; }
+    .button:hover, .button:focus-visible { background: #0d2e2a; }
+    .button.secondary { background: transparent; color: var(--ink); }
+    .button.secondary:hover, .button.secondary:focus-visible { background: var(--green-soft); }
+    .button .arrow { font-size: 20px; line-height: 1; }
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 36px; color: var(--ink-soft); font-size: 12px; }
+    .hero-proof span { display: inline-flex; align-items: center; gap: 8px; }
+    .proof-dot { width: 9px; height: 9px; border: 2px solid var(--accent); border-radius: 50%; }
+    .hero-visual { position: relative; min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: #eef3ea; box-shadow: var(--shadow); }
+    .hero-visual img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid rgba(20, 63, 55, .09); border-radius: 9px; background: #f6f8f3; }
+    .visual-caption { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 2px 0; color: var(--muted); font-size: 11px; }
+    .layer-list { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+    .layer-list span { border: 1px solid #cad7cb; border-radius: 999px; padding: 3px 9px; background: rgba(255, 253, 247, .78); color: var(--ink-soft); }
+    .teaching-path { padding: 60px 0 54px; border-top: 1px solid var(--line); }
+    .section-intro { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+    h2 { margin-bottom: 8px; font-size: clamp(28px, 3.2vw, 48px); line-height: 1.18; letter-spacing: -.04em; }
+    .section-intro p { max-width: 470px; margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .path-line { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .path-card { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+    .path-card figure { margin: 0; border-bottom: 1px solid var(--line); background: #eef3ea; }
+    .path-card figure img { width: 100%; aspect-ratio: 1.45 / 1; object-fit: cover; }
+    .path-body { padding: 20px; }
+    .step-no { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+    .path-body h3 { margin: 9px 0 6px; font-size: 22px; line-height: 1.25; }
+    .path-body p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .path-body .en { margin-top: 4px; font-size: 11px; }
+    .module-section { padding: 54px 0 50px; }
+    .module-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+    .module-heading p { max-width: 500px; margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .module-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+    .module-link { display: grid; grid-template-columns: 110px 1fr auto; align-items: center; gap: 15px; min-height: 112px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); text-decoration: none; }
+    .module-link:hover, .module-link:focus-visible { border-color: var(--ink); box-shadow: 0 8px 22px rgba(20, 63, 55, .07); }
+    .module-link img { width: 110px; height: 90px; object-fit: cover; border-radius: 6px; background: #eef3ea; }
+    .module-link strong { display: block; font-size: 17px; }
+    .module-link small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; }
+    .module-arrow { font-size: 24px; color: var(--accent); }
+    .teacher-kit { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; padding: 34px; border: 1px solid #c8d5c8; border-radius: 14px; background: var(--green-soft); }
+    .teacher-kit h2 { margin-bottom: 12px; font-size: 32px; }
+    .teacher-kit p { max-width: 530px; margin-bottom: 0; color: var(--ink-soft); }
+    .kit-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; align-content: center; }
+    .kit-item { padding: 15px 17px; border: 1px solid #c8d5c8; border-radius: 9px; background: rgba(255, 253, 247, .76); }
+    .kit-item strong { display: block; font-size: 14px; }
+    .kit-item small { color: var(--muted); font-size: 11px; }
+    .notice { margin-top: 42px; padding: 22px 25px; border-left: 4px solid var(--accent); background: var(--accent-soft); color: var(--ink-soft); font-size: 13px; }
+    .notice strong { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; }
+    .boundary { margin-top: 17px; color: var(--muted); font-size: 12px; }
+    .site-footer { max-width: 1440px; margin: 0 auto; padding: 25px 5vw 36px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    .site-footer nav { display: flex; gap: 18px; }
+    .site-footer a { text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+    :focus-visible { outline: 3px solid #ce9842; outline-offset: 3px; }
+    body.is-en [data-zh] { display: none !important; }
+    body:not(.is-en) [data-en] { display: none !important; }
+    @media (max-width: 1080px) { .hero { grid-template-columns: 1fr; padding-top: 52px; } .hero-copy { max-width: 720px; } .hero-visual { max-width: 820px; } .path-line { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 780px) { .site-header { padding-inline: 20px; } .site-nav { gap: 12px; } .site-nav a { display: none; } main { padding-inline: 20px; } h1 { font-size: clamp(40px, 12vw, 60px); } .section-intro, .module-heading { display: block; } .section-intro p, .module-heading p { margin-top: 12px; } .path-line, .module-row, .teacher-kit { grid-template-columns: 1fr; } .teacher-kit { padding: 24px; } .kit-items { grid-template-columns: 1fr 1fr; } .site-footer { display: block; padding-inline: 20px; } .site-footer nav { margin-top: 10px; } }
+    @media (max-width: 480px) { .hero { padding-top: 38px; } .hero-visual { padding: 9px; } .visual-caption { display: block; } .layer-list { justify-content: flex-start; margin-top: 8px; } .module-link { grid-template-columns: 84px 1fr auto; } .module-link img { width: 84px; height: 74px; } .kit-items { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Orthopaedic Trauma Atlas home">
+      <strong>ORTHOPAEDIC TRAUMA ATLAS</strong>
+      <small data-zh>骨科创伤教学图谱</small>
+      <small data-en>Medical teaching atlas</small>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#path" data-zh>教学路径</a><a href="#path" data-en>Teaching path</a>
+      <a href="#modules" data-zh>教学模块</a><a href="#modules" data-en>Modules</a>
+      <a href="research/EVIDENCE.md" data-zh>证据边界</a><a href="research/EVIDENCE.md" data-en>Evidence</a>
+      <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">English</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">FASCIOTOMY / LAYERED TEACHING</p>
+        <h1 id="hero-title" data-zh>下肢骨筋膜室<br>切开减压教学图谱</h1>
+        <h1 data-en>Lower-limb fasciotomy<br>layered teaching atlas</h1>
+        <p class="hero-subtitle" data-zh>把复杂解剖，讲成一条可以演示的教学路径。</p>
+        <p class="hero-subtitle" data-en>Turn layered anatomy into a teachable path.</p>
+        <p class="hero-copy" data-zh>面向骨科教学的三维交互图谱，沿着“识别解剖 → 分步操作 → 神经血管风险 → 复盘讨论”推进课堂。<span class="en">A 3D teaching atlas for anatomy, procedural steps, neurovascular risks and classroom discussion.</span></p>
+        <p class="hero-copy" data-en>A 3D teaching atlas for anatomy, procedural steps, neurovascular risks and classroom discussion.<span class="en">Use the same sequence in Chinese or English, in class or during an online demonstration.</span></p>
+        <div class="actions">
+          <a class="button" href="leg-fasciotomy-v2/index.html"><span data-zh>进入三维演示</span><span data-en>Open 3D demo</span><span class="arrow" aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#path"><span data-zh>查看课程地图</span><span data-en>View teaching path</span></a>
+        </div>
+        <div class="hero-proof" aria-label="Product capabilities"><span><i class="proof-dot" aria-hidden="true"></i><b data-zh>三维交互</b><b data-en>3D interactive</b></span><span><i class="proof-dot" aria-hidden="true"></i><b data-zh>分步讲解</b><b data-en>Stepwise teaching</b></span><span><i class="proof-dot" aria-hidden="true"></i><b data-zh>风险提示</b><b data-en>Risk cues</b></span></div>
+      </div>
+      <figure class="hero-visual">
+        <img src="leg-fasciotomy-v2/teaching-images/leg-v2-zh-stage-3-4k.png" alt="小腿筋膜室三维分层与横断面示意">
+        <figcaption class="visual-caption"><span data-zh>左小腿 · 透视比目鱼肌 · 三维分层试验</span><span data-en>Left leg · layered 3D pilot · cross-section</span><span class="layer-list" aria-label="Layers"><span data-zh>肌群</span><span data-en>Muscles</span><span data-zh>筋膜</span><span data-en>Fascia</span><span data-zh>神经血管</span><span data-en>Neurovascular</span></span></figcaption>
+      </figure>
+    </section>
+    <section class="teaching-path" id="path" aria-labelledby="path-title">
+      <div class="section-intro"><div><p class="eyebrow">A STRUCTURED PATH FOR TEACHING</p><h2 id="path-title" data-zh>四步教学路径 · 从结构到决策</h2><h2 data-en>Four teaching steps · from structure to decision</h2></div><p data-zh>先建立空间关系，再进入操作层次；每一步都能暂停、讲解和回看。</p><p data-en>Build spatial relationships first, then move into procedural layers. Pause, explain and revisit each step.</p></div>
+      <div class="path-line">
+        <article class="path-card"><figure><img src="leg-fasciotomy/teaching-images/leg-zh-step-1-4k.png" alt="小腿完整解剖与筋膜室示意"></figure><div class="path-body"><span class="step-no">01</span><h3 data-zh>识别解剖</h3><h3 data-en>Read the anatomy</h3><p data-zh>从骨骼、肌群和筋膜边界开始，先把空间关系讲清楚。</p><p data-en>Start with bone, muscle and fascial borders to establish spatial relationships.</p></div></article>
+        <article class="path-card"><figure><img src="leg-fasciotomy/teaching-images/leg-zh-step-2-4k.png" alt="小腿双切口与分步操作示意"></figure><div class="path-body"><span class="step-no">02</span><h3 data-zh>分步操作</h3><h3 data-en>Teach the steps</h3><p data-zh>按入路顺序展开皮切口、筋膜层次和四个筋膜室。</p><p data-en>Walk through incision, fascial layers and all four compartments in sequence.</p></div></article>
+        <article class="path-card"><figure><img src="leg-fasciotomy/teaching-images/leg-zh-step-3-4k.png" alt="小腿神经血管风险示意"></figure><div class="path-body"><span class="step-no">03</span><h3 data-zh>神经血管风险</h3><h3 data-en>Flag risk structures</h3><p data-zh>在同一张图上标出需要保护的神经、动脉和静脉。</p><p data-en>Keep nerves, arteries and veins visible while explaining protection points.</p></div></article>
+        <article class="path-card"><figure><img src="leg-fasciotomy/teaching-images/leg-zh-step-5-4k.png" alt="小腿横断面与筋膜室复盘示意"></figure><div class="path-body"><span class="step-no">04</span><h3 data-zh>复盘与讨论</h3><h3 data-en>Review and discuss</h3><p data-zh>回到横断面和临床问题，组织学生说出关键结构与边界。</p><p data-en>Return to the cross-section and ask learners to explain key structures and limits.</p></div></article>
+      </div>
+    </section>
+    <section class="module-section" id="modules" aria-labelledby="modules-title">
+      <div class="module-heading"><div><p class="eyebrow">BROWSE BY REGION</p><h2 id="modules-title" data-zh>选择教学模块</h2><h2 data-en>Choose a teaching module</h2></div><p data-zh>三个独立部位，共用同一条教学逻辑；每页都保留中英文、横断面和风险说明。</p><p data-en>Three independent regions, one teaching logic. Each module includes bilingual steps, cross-sections and risk notes.</p></div>
+      <div class="module-row">
+        <a class="module-link" href="leg-fasciotomy-v2/index.html"><img src="leg-fasciotomy/teaching-images/leg-zh-step-5-4k.png" alt="小腿四筋膜室"><span><strong data-zh>小腿四筋膜室</strong><strong data-en>Four-compartment leg</strong><small data-zh>三维主演示 · 双切口 · 深后室</small><small data-en>3D pilot · dual approach · deep posterior</small></span><span class="module-arrow" aria-hidden="true">→</span></a>
+        <a class="module-link" href="thigh-fasciotomy/index.html"><img src="thigh-fasciotomy/teaching-images/thigh-zh-step-3-4k.png" alt="大腿筋膜室"><span><strong data-zh>大腿筋膜室</strong><strong data-en>Thigh compartments</strong><small data-zh>阔筋膜 · 前室 · 收肌室</small><small data-en>Fascia lata · anterior · adductor</small></span><span class="module-arrow" aria-hidden="true">→</span></a>
+        <a class="module-link" href="foot-fasciotomy/index.html"><img src="foot-fasciotomy/teaching-images/foot-zh-step-3-4k.png" alt="足部筋膜室"><span><strong data-zh>足部筋膜室</strong><strong data-en>Foot compartments</strong><small data-zh>前足、内侧及外侧入路</small><small data-en>Forefoot, medial and lateral approaches</small></span><span class="module-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="teacher-kit" aria-labelledby="kit-title">
+      <div><p class="eyebrow">READY FOR THE CLASSROOM</p><h2 id="kit-title" data-zh>教师可以直接带走</h2><h2 data-en>Ready for the classroom</h2><p data-zh>从一张三维图开始，用四个问题组织课堂：看见了什么？下一步如何进入？哪些结构必须保护？这张图的边界在哪里？</p><p data-en>Start with one 3D view and structure the lesson around four questions: what is visible, what comes next, what must be protected, and where are the limits of the model?</p></div>
+      <div class="kit-items"><div class="kit-item"><strong data-zh>讲义式路径</strong><strong data-en>Lesson path</strong><small data-zh>四步结构，适合投屏讲解</small><small data-en>Four steps for classroom projection</small></div><div class="kit-item"><strong data-zh>双语界面</strong><strong data-en>Bilingual UI</strong><small data-zh>中文与 English 一键切换</small><small data-en>Switch Chinese and English instantly</small></div><div class="kit-item"><strong data-zh>证据回查</strong><strong data-en>Evidence links</strong><small data-zh>参数与来源保留边界</small><small data-en>Parameters keep their source context</small></div><div class="kit-item"><strong data-zh>在线演示</strong><strong data-en>Live demo</strong><small data-zh>进入三维试验页继续操作</small><small data-en>Continue in the 3D pilot</small></div></div>
+    </section>
+    <aside class="notice" id="boundary"><strong data-zh>教学边界提示</strong><strong data-en>Teaching boundary</strong><span data-zh>足部管理尚无统一共识，示意图不能视为所有足部损伤的固定手术处方。</span><span data-en>Foot compartment syndrome management lacks consensus; these drawings are not a universal operative prescription.</span></aside>
+    <p class="boundary" data-zh>本系列针对成人创伤性急性筋膜室综合征。图形为原创二维关系示意与非比例三维分层，不能用于患者特异性测量、手术导航或替代临床判断。依据 AAOS 2025、BOASt 2025 与 AO 入路说明独立编制。</p>
+    <p class="boundary" data-en>This series addresses adult traumatic acute compartment syndrome. The drawings are original relational schematics and non-proportional 3D layers; they are not for patient-specific measurement, surgical navigation or replacing clinical judgment. Compiled independently from AAOS 2025, BOASt 2025 and AO approaches.</p>
+  </main>
+  <footer class="site-footer"><span data-zh>36 张 3840×2160 PNG + 36 张 SVG · 本地制作版 · V1.0</span><span data-en>36 PNG plates + 36 SVG plates · Local build · V1.0</span><nav aria-label="Footer navigation"><a href="research/EVIDENCE.md" data-zh>来源与证据</a><a href="research/EVIDENCE.md" data-en>Evidence</a><a href="README.md" data-zh>维护说明</a><a href="README.md" data-en>Maintenance</a></nav></footer>
+  <script>
+    const toggle = document.getElementById('languageToggle');
+    function setLanguage(language) {
+      const english = language === 'en';
+      document.body.classList.toggle('is-en', english);
+      document.documentElement.lang = english ? 'en' : 'zh-CN';
+      toggle.textContent = english ? '中文' : 'English';
+      toggle.setAttribute('aria-label', english ? '切换到中文' : 'Switch to English');
+      try { localStorage.setItem('atlas-language', english ? 'en' : 'zh'); } catch (_) {}
+    }
+    toggle.addEventListener('click', () => setLanguage(document.body.classList.contains('is-en') ? 'zh' : 'en'));
+    let saved = 'zh';
+    try { saved = localStorage.getItem('atlas-language') || 'zh'; } catch (_) {}
+    setLanguage(saved);
+  </script>
+</body>
+</html>

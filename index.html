@@ -2,122 +2,168 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b2f30">
-  <meta name="description" content="骨盆外固定、胫骨结节牵引、跟骨牵引与颅骨牵引的双语交互式骨科创伤操作教学图谱。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143f37">
+  <meta name="description" content="面向医学教师的骨科创伤与筋膜室三维分层、分步操作和神经血管风险教学图谱。">
   <title>骨科创伤操作教学图谱 · Orthopaedic Trauma Atlas</title>
-  <link rel="stylesheet" href="assets/home/home.css">
+  <style>
+    :root { --ink:#143f37; --ink-soft:#355a50; --muted:#60776f; --paper:#f5f6f0; --card:#fffdf7; --line:#d6dfd4; --accent:#c28e2b; --accent-soft:#eee3c9; --green-soft:#e7eee5; --shadow:0 16px 40px rgba(20,63,55,.08); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.7 ui-sans-serif,-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB",sans-serif; }
+    a { color:inherit; text-underline-offset:4px; }
+    img { display:block; max-width:100%; }
+    button { font:inherit; cursor:pointer; }
+    .site-header { max-width:1440px; margin:auto; padding:22px 5vw 18px; display:flex; align-items:center; justify-content:space-between; gap:24px; border-bottom:1px solid var(--line); }
+    .brand { font-size:12px; letter-spacing:.16em; line-height:1.35; text-decoration:none; white-space:nowrap; }
+    .brand strong { display:block; font-weight:750; }
+    .brand small { display:block; color:var(--muted); font-size:10px; letter-spacing:.08em; }
+    .site-nav { display:flex; align-items:center; gap:23px; margin-left:auto; }
+    .site-nav a { color:var(--ink-soft); font-size:13px; text-decoration:none; }
+    .site-nav a:hover { color:var(--ink); }
+    .language-toggle { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; padding:7px 13px; font-size:12px; }
+    main { max-width:1440px; margin:auto; padding:0 5vw 68px; }
+    .hero { display:grid; grid-template-columns:minmax(0,.9fr) minmax(500px,1.1fr); align-items:center; gap:clamp(30px,5vw,80px); padding:70px 0 58px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent); font-size:11px; font-weight:750; letter-spacing:.17em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:650px; margin-bottom:18px; font-size:clamp(42px,5.2vw,76px); line-height:1.1; letter-spacing:-.055em; }
+    h2 { margin-bottom:8px; font-size:clamp(28px,3.2vw,48px); line-height:1.18; letter-spacing:-.04em; }
+    h3 { line-height:1.25; }
+    .hero-subtitle { margin-bottom:20px; color:var(--ink-soft); font-size:18px; }
+    .hero-copy { max-width:650px; margin-bottom:28px; color:var(--muted); font-size:16px; }
+    .hero-copy .en { display:block; margin-top:6px; font-size:13px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:46px; padding:10px 21px; border:1px solid var(--ink); border-radius:7px; background:var(--ink); color:#fffdf7; font-weight:700; text-decoration:none; }
+    .button:hover,.button:focus-visible { background:#0d2e2a; }
+    .button.secondary { background:transparent; color:var(--ink); }
+    .button.secondary:hover,.button.secondary:focus-visible { background:var(--green-soft); }
+    .button .arrow { font-size:20px; line-height:1; }
+    .hero-proof { display:flex; flex-wrap:wrap; gap:22px; margin-top:36px; color:var(--ink-soft); font-size:12px; }
+    .hero-proof span { display:inline-flex; align-items:center; gap:8px; }
+    .proof-dot { width:9px; height:9px; border:2px solid var(--accent); border-radius:50%; }
+    .hero-visual { min-width:0; padding:16px; border:1px solid var(--line); border-radius:16px; background:#eef3ea; box-shadow:var(--shadow); }
+    .hero-visual img { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid rgba(20,63,55,.09); border-radius:9px; background:#f6f8f3; }
+    .visual-caption { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:12px 2px 0; color:var(--muted); font-size:11px; }
+    .layer-list { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; }
+    .layer-list span { padding:3px 9px; border:1px solid #cad7cb; border-radius:999px; background:rgba(255,253,247,.78); color:var(--ink-soft); }
+    .section-block { padding:60px 0 54px; border-top:1px solid var(--line); }
+    .section-intro { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; }
+    .section-intro p { max-width:520px; margin-bottom:0; color:var(--muted); font-size:13px; }
+    .path-line { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .path-card { overflow:hidden; border:1px solid var(--line); border-radius:12px; background:var(--card); }
+    .path-card figure { margin:0; border-bottom:1px solid var(--line); background:#eef3ea; }
+    .path-card figure img { width:100%; aspect-ratio:1.45/1; object-fit:cover; }
+    .path-body { padding:20px; }
+    .step-no { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.12em; }
+    .path-body h3 { margin:9px 0 6px; font-size:21px; }
+    .path-body p { margin-bottom:0; color:var(--muted); font-size:13px; }
+    .evidence-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:24px; }
+    .evidence-card { padding:18px; border:1px solid var(--line); border-radius:10px; background:#eef3ea; }
+    .evidence-card strong { display:block; margin-bottom:5px; font-size:15px; }
+    .evidence-card p { margin-bottom:9px; color:var(--ink-soft); font-size:12px; }
+    .evidence-card a { color:var(--ink); font-size:11px; font-weight:700; }
+    .featured-module { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:28px; padding:18px; border:1px solid var(--line); border-radius:14px; background:var(--card); box-shadow:var(--shadow); }
+    .featured-module img { width:100%; height:100%; min-height:310px; object-fit:cover; border-radius:9px; background:#eef3ea; }
+    .featured-copy { padding:18px 18px 18px 4px; }
+    .module-code { color:var(--accent); font-size:11px; font-weight:800; letter-spacing:.14em; }
+    .featured-copy h3 { margin:10px 0 5px; font-size:32px; }
+    .module-en { color:var(--muted); font-size:13px; }
+    .featured-copy p { color:var(--ink-soft); }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0 22px; }
+    .tags span { padding:4px 10px; border:1px solid #cad7cb; border-radius:999px; color:var(--muted); font-size:11px; }
+    .module-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; margin-top:14px; }
+    .module-card { overflow:hidden; border:1px solid var(--line); border-radius:11px; background:var(--card); }
+    .module-card figure { position:relative; margin:0; border-bottom:1px solid var(--line); background:#eef3ea; }
+    .module-card figure img { width:100%; aspect-ratio:1.7/1; object-fit:cover; }
+    .module-card figure span { position:absolute; top:10px; left:10px; padding:4px 8px; border-radius:999px; background:var(--accent-soft); color:var(--ink); font-size:11px; font-weight:800; }
+    .module-body { padding:17px; }
+    .module-body h3 { margin:5px 0 3px; font-size:20px; }
+    .module-body p { margin-bottom:9px; color:var(--muted); font-size:12px; }
+    .module-body .module-en { margin-bottom:10px; font-size:11px; }
+    .module-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .module-actions a { color:var(--ink); font-size:11px; font-weight:750; text-decoration:none; }
+    .module-actions .button { color:#fffdf7; font-size:12px; }
+    .module-actions a:hover { text-decoration:underline; }
+    .module-actions .source { color:var(--muted); }
+    .teacher-kit { display:grid; grid-template-columns:1.05fr .95fr; gap:28px; padding:34px; border:1px solid #c8d5c8; border-radius:14px; background:var(--green-soft); }
+    .teacher-kit h2 { margin-bottom:12px; font-size:32px; }
+    .teacher-kit p { max-width:560px; margin-bottom:0; color:var(--ink-soft); }
+    .kit-items { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; align-content:center; }
+    .kit-item { padding:15px 17px; border:1px solid #c8d5c8; border-radius:9px; background:rgba(255,253,247,.76); }
+    .kit-item strong { display:block; font-size:14px; }
+    .kit-item small { color:var(--muted); font-size:11px; }
+    .notice { margin-top:42px; padding:22px 25px; border-left:4px solid var(--accent); background:var(--accent-soft); color:var(--ink-soft); font-size:13px; }
+    .notice strong { display:block; margin-bottom:5px; color:var(--ink); font-size:15px; }
+    .boundary { margin-top:17px; color:var(--muted); font-size:12px; }
+    .site-footer { max-width:1440px; margin:auto; padding:25px 5vw 36px; display:flex; justify-content:space-between; gap:20px; border-top:1px solid var(--line); color:var(--muted); font-size:11px; }
+    .site-footer nav { display:flex; gap:18px; }
+    .site-footer a { text-decoration:none; }
+    .site-footer a:hover { text-decoration:underline; }
+    :focus-visible { outline:3px solid #ce9842; outline-offset:3px; }
+    body.is-en [data-zh] { display:none !important; }
+    body:not(.is-en) [data-en] { display:none !important; }
+    @media (max-width:1080px) { .hero { grid-template-columns:1fr; padding-top:52px; } .hero-copy { max-width:720px; } .hero-visual { max-width:900px; } .path-line { grid-template-columns:repeat(2,1fr); } .featured-module { grid-template-columns:1fr; } .featured-module img { min-height:260px; } }
+    @media (max-width:780px) { .site-header { padding-inline:20px; } .site-nav { gap:12px; } .site-nav a { display:none; } main { padding-inline:20px; } h1 { font-size:clamp(40px,12vw,60px); } .section-intro { display:block; } .section-intro p { margin-top:12px; } .path-line,.evidence-strip,.module-grid,.teacher-kit { grid-template-columns:1fr; } .teacher-kit { padding:24px; } .kit-items { grid-template-columns:1fr 1fr; } .featured-copy { padding:18px 4px 4px; } .site-footer { display:block; padding-inline:20px; } .site-footer nav { margin-top:10px; } }
+    @media (max-width:480px) { .hero { padding-top:38px; } .hero-visual { padding:9px; } .visual-caption { display:block; } .layer-list { justify-content:flex-start; margin-top:8px; } .kit-items { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="返回首页">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span>ORTHOPAEDIC<br>TRAUMA ATLAS</span>
-    </a>
-    <nav aria-label="主导航">
-      <a href="#modules" data-zh="教学模块" data-en="Modules">教学模块</a>
-      <a href="#method" data-zh="教学设计" data-en="Teaching design">教学设计</a>
-      <a href="#evidence" data-zh="依据与边界" data-en="Evidence & limits">依据与边界</a>
-    </nav>
-    <div class="header-actions">
-      <button id="languageToggle" class="language" type="button" aria-label="Switch language">EN</button>
-      <a class="github-link" href="https://github.com/TUANZIDING/orthopaedic-trauma-atlas" target="_blank" rel="noreferrer">GitHub ↗</a>
-    </div>
+    <a class="brand" href="#top" aria-label="Orthopaedic Trauma Atlas home"><strong>ORTHOPAEDIC TRAUMA ATLAS</strong><small data-zh>骨科创伤教学图谱</small><small data-en>Medical teaching atlas</small></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="#path" data-zh>教学路径</a><a href="#path" data-en>Teaching path</a><a href="#modules" data-zh>案例模块</a><a href="#modules" data-en>Cases</a><a href="#evidence" data-zh>证据边界</a><a href="#evidence" data-en>Evidence</a><a href="https://github.com/TUANZIDING/orthopaedic-trauma-atlas" target="_blank" rel="noreferrer">GitHub ↗</a><button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">English</button></nav>
   </header>
-
   <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow" data-zh="开放式医学教学项目" data-en="OPEN MEDICAL TEACHING PROJECT">开放式医学教学项目</p>
-        <h1><span data-zh="骨科创伤" data-en="ORTHOPAEDIC TRAUMA">骨科创伤</span><br><em data-zh="操作教学图谱" data-en="PROCEDURAL ATLAS">操作教学图谱</em></h1>
-        <p class="hero-lead" data-zh="用可旋转的参考解剖、分步操作和神经血管警示，帮助学员在进入临床操作前建立空间认识。" data-en="Build spatial understanding before clinical practice through rotatable reference anatomy, stepwise technique, and neurovascular warnings.">用可旋转的参考解剖、分步操作和神经血管警示，帮助学员在进入临床操作前建立空间认识。</p>
-        <div class="hero-actions">
-          <a class="primary-button" href="#modules" data-zh="浏览教学模块 ↓" data-en="Explore modules ↓">浏览教学模块 ↓</a>
-          <a class="text-link" href="neurovascular-v2/index.html" data-zh="进入合集入口 ↗" data-en="Open atlas index ↗">进入合集入口 ↗</a>
-        </div>
-        <dl class="stats">
-          <div><dt>04</dt><dd data-zh="独立模块" data-en="MODULES">独立模块</dd></div>
-          <div><dt>20</dt><dd data-zh="4K 教学图" data-en="4K PLATES">4K 教学图</dd></div>
-          <div><dt>ZH/EN</dt><dd data-zh="双语界面" data-en="BILINGUAL">双语界面</dd></div>
-        </dl>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">OPEN ORTHOPAEDIC TEACHING ATLAS</p>
+        <h1 id="hero-title" data-zh>骨科创伤<br>操作教学图谱</h1><h1 data-en>Orthopaedic trauma<br>procedural atlas</h1>
+        <p class="hero-subtitle" data-zh>把复杂解剖，讲成一条可以演示的教学路径。</p><p class="hero-subtitle" data-en>Turn complex anatomy into a teachable path.</p>
+        <p class="hero-copy" data-zh>从骨性标志与筋膜层次开始，按步骤展开操作，再回到神经血管风险、影像复核与停止条件。面向课堂投屏、术前复习和技能训练。<span class="en">Reference anatomy, procedural sequence, structures at risk, imaging checks and stop conditions in one teaching flow.</span></p>
+        <p class="hero-copy" data-en>Reference anatomy, procedural sequence, structures at risk, imaging checks and stop conditions in one teaching flow.<span class="en">Built for classroom projection, pre-procedure review and skills training.</span></p>
+        <div class="actions"><a class="button" href="fasciotomy-atlas/leg-fasciotomy-v2/index.html"><span data-zh>进入三维演示</span><span data-en>Open 3D demo</span><span class="arrow" aria-hidden="true">→</span></a><a class="button secondary" href="#path"><span data-zh>查看课程地图</span><span data-en>View teaching path</span></a></div>
+        <div class="hero-proof"><span><i class="proof-dot" aria-hidden="true"></i><b data-zh>07 个教学模块</b><b data-en>07 teaching modules</b></span><span><i class="proof-dot" aria-hidden="true"></i><b data-zh>三维 + 分步图</b><b data-en>3D + stepwise plates</b></span><span><i class="proof-dot" aria-hidden="true"></i><b data-zh>中英双语</b><b data-en>Bilingual</b></span></div>
       </div>
+      <figure class="hero-visual"><img src="fasciotomy-atlas/leg-fasciotomy-v2/teaching-images/leg-v2-zh-stage-3-4k.png" alt="小腿筋膜室三维分层与横断面示意"><figcaption class="visual-caption"><span data-zh>小腿筋膜室 · 透视比目鱼肌 · 三维分层试验</span><span data-en>Leg compartments · layered 3D pilot · cross-section</span><span class="layer-list"><span data-zh>肌群</span><span data-en>Muscles</span><span data-zh>筋膜</span><span data-en>Fascia</span><span data-zh>神经血管</span><span data-en>Neurovascular</span></span></figcaption></figure>
+    </section>
 
-      <div class="showcase" aria-label="四个教学模块动态预览">
-        <div class="showcase-frame">
-          <video id="showreel" autoplay muted loop playsinline preload="metadata" poster="neurovascular-v2/pelvic-external-fixation/preview-v2.png">
-            <source src="assets/home/orthopaedic-trauma-atlas-showcase.mp4" type="video/mp4">
-          </video>
-          <div class="showcase-top"><span class="live-dot"></span><span data-zh="交互图谱预览" data-en="INTERACTIVE ATLAS PREVIEW">交互图谱预览</span></div>
-          <div class="showcase-caption"><b id="showcaseNumber">01</b><span id="showcaseTitle">骨盆外固定</span></div>
-          <button id="videoToggle" class="video-toggle" type="button" aria-label="暂停视频">Ⅱ</button>
-        </div>
-        <div class="showcase-tabs" role="tablist" aria-label="选择预览模块">
-          <button class="showcase-tab active" type="button" data-time="0" data-index="0" aria-label="骨盆外固定"><img src="neurovascular-v2/pelvic-external-fixation/preview-v2.png" alt="骨盆外固定预览"></button>
-          <button class="showcase-tab" type="button" data-time="3.2" data-index="1" aria-label="胫骨结节牵引"><img src="neurovascular-v2/tibial-traction/preview-v2.png" alt="胫骨结节牵引预览"></button>
-          <button class="showcase-tab" type="button" data-time="6.4" data-index="2" aria-label="跟骨牵引"><img src="neurovascular-v2/calcaneal-traction/preview-v2.png" alt="跟骨牵引预览"></button>
-          <button class="showcase-tab" type="button" data-time="9.6" data-index="3" aria-label="颅骨牵引"><img src="neurovascular-v2/cranial-traction/preview-v2.png" alt="颅骨牵引预览"></button>
-        </div>
+    <section class="section-block" id="path" aria-labelledby="path-title">
+      <div class="section-intro"><div><p class="eyebrow">A STRUCTURED PATH FOR TEACHING</p><h2 id="path-title" data-zh>四步教学路径 · 从结构到决策</h2><h2 data-en>Four teaching steps · from structure to decision</h2></div><p data-zh>先建立空间关系，再进入操作层次；每一步都能暂停、讲解、回看，并回到来源与边界。</p><p data-en>Build spatial relationships first, then move into procedural layers. Pause, explain, revisit, and return to sources and limits.</p></div>
+      <div class="path-line">
+        <article class="path-card"><figure><img src="fasciotomy-atlas/leg-fasciotomy-v2/preview.png" alt="小腿筋膜室三维分层预览"></figure><div class="path-body"><span class="step-no">01</span><h3 data-zh>识别解剖</h3><h3 data-en>Read the anatomy</h3><p data-zh>先看骨骼、肌群、筋膜边界和横断面，让学员知道自己正在看哪里。</p><p data-en>Start with bone, muscle, fascial borders and cross-sections so learners know where they are.</p></div></article>
+        <article class="path-card"><figure><img src="neurovascular-v2/pelvic-external-fixation/preview-v2.png" alt="骨盆外固定三维教学预览"></figure><div class="path-body"><span class="step-no">02</span><h3 data-zh>选择入路</h3><h3 data-en>Choose the approach</h3><p data-zh>从骨性标志、入钉点或筋膜层次进入，明确每一步的目的与停止点。</p><p data-en>Move from landmarks and entry points into fascial layers, with a stated purpose and stop point.</p></div></article>
+        <article class="path-card"><figure><img src="neurovascular-v2/tibial-traction/preview-v2.png" alt="胫骨结节牵引神经血管风险预览"></figure><div class="path-body"><span class="step-no">03</span><h3 data-zh>神经血管风险</h3><h3 data-en>Flag risk structures</h3><p data-zh>在同一视野中标出神经、动脉和静脉，说明哪些结构会改变入路判断。</p><p data-en>Keep nerves, arteries and veins in view and explain how they change the approach.</p></div></article>
+        <article class="path-card"><figure><img src="fasciotomy-atlas/leg-fasciotomy/teaching-images/leg-zh-step-5-4k.png" alt="小腿筋膜室横断面复核预览"></figure><div class="path-body"><span class="step-no">04</span><h3 data-zh>复核与边界</h3><h3 data-en>Review and bound the lesson</h3><p data-zh>回到横断面、影像和停止条件，明确示意图不能替代患者级判断。</p><p data-en>Return to cross-sections, imaging and stop conditions; the drawing is not patient-specific guidance.</p></div></article>
+      </div>
+      <div class="evidence-strip">
+        <article class="evidence-card"><strong data-zh>指南不是固定协议</strong><strong data-en>Guidelines are not fixed protocols</strong><p data-zh>AAOS 2025 明确要求结合个体临床情况判断；页面只呈现教学定位和证据边界。</p><p data-en>AAOS 2025 states that care depends on individual clinical circumstances; this atlas keeps the teaching boundary visible.</p><a href="https://www.aaos.org/acscpg2025" target="_blank" rel="noreferrer">AAOS 2025 ↗</a></article>
+        <article class="evidence-card"><strong data-zh>风险结构先于动作</strong><strong data-en>Risk structures before actions</strong><p data-zh>AO 的入钉与安全区页面把神经血管关系放在入路判断之前。</p><p data-en>AO safe-zone references place neurovascular relationships before pin or approach decisions.</p><a href="https://surgeryreference.aofoundation.org/orthopedic-trauma/periprosthetic-fractures/knee/approach/safe-zones" target="_blank" rel="noreferrer">AO safe zones ↗</a></article>
+        <article class="evidence-card"><strong data-zh>示意图保留边界</strong><strong data-en>Schematics keep their limits</strong><p data-zh>模型为教学关系示意，不提供患者级安全距离、导航或器械认证。</p><p data-en>Models show relationships for teaching; they do not provide patient-specific distances, navigation or device certification.</p><a href="#evidence" data-zh>查看使用边界 ↓</a><a href="#evidence" data-en>View limits ↓</a></article>
       </div>
     </section>
 
-    <section class="manifesto">
-      <p class="section-number">01 — <span data-zh="教学目标" data-en="TEACHING AIM">教学目标</span></p>
-      <h2 data-zh="从骨性标志到风险结构，从操作顺序到停止条件。" data-en="From bony landmarks to structures at risk, from sequence to stop conditions.">从骨性标志到风险结构，从操作顺序到停止条件。</h2>
-      <p data-zh="每个模块把三维参考解剖、操作参数、神经血管关系和临床边界放在同一个视野中，供课堂演示、术前复习和技能训练使用。" data-en="Each module brings 3D reference anatomy, procedural parameters, neurovascular relationships, and clinical limits into one view for teaching, pre-procedure review, and skills training.">每个模块把三维参考解剖、操作参数、神经血管关系和临床边界放在同一个视野中，供课堂演示、术前复习和技能训练使用。</p>
-    </section>
-
-    <section id="modules" class="modules-section">
-      <div class="section-heading">
-        <p class="section-number">02 — <span data-zh="教学模块" data-en="MODULES">教学模块</span></p>
-        <h2 data-zh="四项急诊与创伤骨科操作" data-en="Four emergency and trauma procedures">四项急诊与创伤骨科操作</h2>
-      </div>
+    <section class="section-block" id="modules" aria-labelledby="modules-title">
+      <div class="section-intro"><div><p class="eyebrow">BROWSE BY CASE</p><h2 id="modules-title" data-zh>七个教学模块 · 一套讲授逻辑</h2><h2 data-en>Seven cases · one teaching logic</h2></div><p data-zh>每个模块都保留中英文、三维或分步图、神经血管提示、来源和适用限制。</p><p data-en>Every module keeps bilingual copy, 3D or stepwise plates, neurovascular cues, sources and limits.</p></div>
+      <article class="featured-module"><img src="fasciotomy-atlas/leg-fasciotomy-v2/preview.png" alt="小腿筋膜室三维分层试验页预览"><div class="featured-copy"><span class="module-code">01 · 3D PILOT / PRIMARY DEMO</span><h3 data-zh>小腿筋膜室 · 三维分层</h3><h3 data-en>Leg compartments · layered 3D pilot</h3><p class="module-en">Lower-limb fasciotomy · anatomy → exposure → protection</p><p data-zh>以固定左小腿为教学对象，逐层显示浅后室与深后室，并把横断面、神经血管深度提示和操作步骤放在同一工作区。适合讲解“看见结构，再决定下一步”。</p><p data-en>Uses a fixed left-leg teaching model to show superficial and deep posterior layers, cross-section and depth-aware neurovascular cues in one workspace.</p><div class="tags"><span data-zh>四步教学路径</span><span data-en>Four-step path</span><span data-zh>横断面</span><span data-en>Cross-section</span><span data-zh>深度提示</span><span data-en>Depth cues</span><span data-zh>待临床复核</span><span data-en>Clinical review pending</span></div><div class="module-actions"><a class="button" href="fasciotomy-atlas/leg-fasciotomy-v2/index.html"><span data-zh>进入在线演示 →</span><span data-en>Open online demo →</span></a><a href="fasciotomy-atlas/leg-fasciotomy-v2/README.md" data-zh>查看模块说明</a><a href="fasciotomy-atlas/leg-fasciotomy-v2/README.md" data-en>Module notes</a></div></div></article>
       <div class="module-grid">
-        <a class="module-card" href="neurovascular-v2/pelvic-external-fixation/index.html">
-          <div class="module-image"><img src="neurovascular-v2/pelvic-external-fixation/preview-v2.png" alt="骨盆外固定架三维教学图"><span>01</span></div>
-          <div class="module-body"><p>PELVIC EXTERNAL FIXATION</p><h3 data-zh="骨盆外固定架" data-en="Pelvic external fixation">骨盆外固定架</h3><p data-zh="髋臼上置钉为主，髂嵴置钉为对照；显示股外侧皮神经等风险结构。" data-en="Supra-acetabular fixation with iliac-crest comparison, including the lateral femoral cutaneous nerve and other structures at risk.">髋臼上置钉为主，髂嵴置钉为对照；显示股外侧皮神经等风险结构。</p><span class="open-module" data-zh="进入模块 ↗" data-en="Open module ↗">进入模块 ↗</span></div>
-        </a>
-        <a class="module-card" href="neurovascular-v2/tibial-traction/index.html">
-          <div class="module-image"><img src="neurovascular-v2/tibial-traction/preview-v2.png" alt="胫骨结节骨牵引三维教学图"><span>02</span></div>
-          <div class="module-body"><p>PROXIMAL TIBIAL TRACTION</p><h3 data-zh="胫骨结节骨牵引" data-en="Proximal tibial traction">胫骨结节骨牵引</h3><p data-zh="辨识腓总神经、腘血管和胫神经，以风险关系解释进针方向。" data-en="Relates pin direction to the common fibular nerve, popliteal vessels, and tibial nerve.">辨识腓总神经、腘血管和胫神经，以风险关系解释进针方向。</p><span class="open-module" data-zh="进入模块 ↗" data-en="Open module ↗">进入模块 ↗</span></div>
-        </a>
-        <a class="module-card" href="neurovascular-v2/calcaneal-traction/index.html">
-          <div class="module-image"><img src="neurovascular-v2/calcaneal-traction/preview-v2.png" alt="跟骨骨牵引三维教学图"><span>03</span></div>
-          <div class="module-body"><p>CALCANEAL TRACTION</p><h3 data-zh="跟骨骨牵引" data-en="Calcaneal traction">跟骨骨牵引</h3><p data-zh="重点呈现胫后神经血管束、跟骨支与腓肠神经的空间关系。" data-en="Highlights the posterior tibial neurovascular bundle, calcaneal branches, and sural nerve.">重点呈现胫后神经血管束、跟骨支与腓肠神经的空间关系。</p><span class="open-module" data-zh="进入模块 ↗" data-en="Open module ↗">进入模块 ↗</span></div>
-        </a>
-        <a class="module-card" href="neurovascular-v2/cranial-traction/index.html">
-          <div class="module-image"><img src="neurovascular-v2/cranial-traction/preview-v2.png" alt="颅骨牵引三维教学图"><span>04</span></div>
-          <div class="module-body"><p>CRANIAL TRACTION</p><h3 data-zh="颅骨牵引" data-en="Cranial traction">颅骨牵引</h3><p data-zh="展示颞浅动脉、耳颞神经及椎动脉—脊髓等风险结构与停止条件。" data-en="Shows the superficial temporal artery, auriculotemporal nerve, vertebral arteries, spinal cord, and stop conditions.">展示颞浅动脉、耳颞神经及椎动脉—脊髓等风险结构与停止条件。</p><span class="open-module" data-zh="进入模块 ↗" data-en="Open module ↗">进入模块 ↗</span></div>
-        </a>
+        <article class="module-card"><figure><img src="neurovascular-v2/pelvic-external-fixation/preview-v2.png" alt="骨盆外固定架三维教学图"><span>02</span></figure><div class="module-body"><h3 data-zh>骨盆外固定架</h3><h3 data-en>Pelvic external fixation</h3><p class="module-en">Supra-acetabular and iliac-crest fixation</p><p data-zh>把髂前下棘、髂嵴与股外侧皮神经放进同一张入钉路径中；前环稳定不等于后环损伤已解决。</p><p data-en>Relates AIIS, iliac crest and the lateral femoral cutaneous nerve; anterior-ring control does not resolve associated posterior injury.</p><div class="module-actions"><a href="neurovascular-v2/pelvic-external-fixation/index.html" data-zh>进入模块 ↗</a><a href="neurovascular-v2/pelvic-external-fixation/index.html" data-en>Open module ↗</a><a class="source" href="https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/pelvic-ring/basic-technique/external-fixation" target="_blank" rel="noreferrer">AO source ↗</a></div></div></article>
+        <article class="module-card"><figure><img src="neurovascular-v2/tibial-traction/preview-v2.png" alt="胫骨结节骨牵引三维教学图"><span>03</span></figure><div class="module-body"><h3 data-zh>胫骨结节骨牵引</h3><h3 data-en>Proximal tibial traction</h3><p class="module-en">Entry direction and posterior neurovascular context</p><p data-zh>重点辨认腓总神经、胫神经和腘血管；入口、方向与出口必须一起核对。</p><p data-en>Highlights the common fibular nerve, tibial nerve and popliteal vessels; entry, direction and exit must be checked together.</p><div class="module-actions"><a href="neurovascular-v2/tibial-traction/index.html" data-zh>进入模块 ↗</a><a href="neurovascular-v2/tibial-traction/index.html" data-en>Open module ↗</a><a class="source" href="https://surgeryreference.aofoundation.org/orthopedic-trauma/periprosthetic-fractures/knee/approach/safe-zones" target="_blank" rel="noreferrer">AO source ↗</a></div></div></article>
+        <article class="module-card"><figure><img src="neurovascular-v2/calcaneal-traction/preview-v2.png" alt="跟骨骨牵引三维教学图"><span>04</span></figure><div class="module-body"><h3 data-zh>跟骨骨牵引</h3><h3 data-en>Calcaneal traction</h3><p class="module-en">Medial bundle and lateral exit risks</p><p data-zh>内侧显示胫后神经血管束与跟支，外侧提醒腓肠神经；不能只背一个进针方向。</p><p data-en>Shows the posterior tibial bundle and calcaneal branches medially while keeping the sural nerve risk visible laterally.</p><div class="module-actions"><a href="neurovascular-v2/calcaneal-traction/index.html" data-zh>进入模块 ↗</a><a href="neurovascular-v2/calcaneal-traction/index.html" data-en>Open module ↗</a><a class="source" href="https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/midfoot/approach/safe-zone-for-external-fixator" target="_blank" rel="noreferrer">AO source ↗</a></div></div></article>
+        <article class="module-card"><figure><img src="neurovascular-v2/cranial-traction/preview-v2.png" alt="颅骨牵引三维教学图"><span>05</span></figure><div class="module-body"><h3 data-zh>颅骨牵引</h3><h3 data-en>Cranial traction</h3><p class="module-en">Superficial vessel risk and cervical monitoring</p><p data-zh>把浅表血管风险与颈椎创伤监测分开讲，不把深部结构画成颅骨针的安全通道。</p><p data-en>Separates superficial vessel risk from cervical-trauma monitoring; deep structures are not skull-pin corridors.</p><div class="module-actions"><a href="neurovascular-v2/cranial-traction/index.html" data-zh>进入模块 ↗</a><a href="neurovascular-v2/cranial-traction/index.html" data-en>Open module ↗</a><a class="source" href="https://wfns-spine.org/pdf/Recom-Cervical-Spine-Trauma.pdf" target="_blank" rel="noreferrer">WFNS source ↗</a></div></div></article>
+        <article class="module-card"><figure><img src="fasciotomy-atlas/thigh-fasciotomy/preview.png" alt="大腿筋膜室教学图"><span>06</span></figure><div class="module-body"><h3 data-zh>大腿筋膜室</h3><h3 data-en>Thigh compartments</h3><p class="module-en">Three compartments · medial and lateral approaches</p><p data-zh>按外侧与内侧入路逐室展开，强调穿支和坐骨神经等邻近风险，不把一条切口当作三室的自动答案。</p><p data-en>Walks through lateral and medial approaches with perforator and sciatic-nerve context; one incision is not an automatic release of all three compartments.</p><div class="module-actions"><a href="fasciotomy-atlas/thigh-fasciotomy/index.html" data-zh>进入模块 ↗</a><a href="fasciotomy-atlas/thigh-fasciotomy/index.html" data-en>Open module ↗</a><a class="source" href="https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/further-reading/compartment-syndrome-thigh" target="_blank" rel="noreferrer">AO source ↗</a></div></div></article>
+        <article class="module-card"><figure><img src="fasciotomy-atlas/foot-fasciotomy/preview.png" alt="足部筋膜室教学图"><span>07</span></figure><div class="module-body"><h3 data-zh>足部筋膜室</h3><h3 data-en>Foot compartments</h3><p class="module-en">Forefoot and hindfoot boundaries</p><p data-zh>分开讲前足与后足跟骨室，保留足背、内侧和外侧入路的差异与共识不足。</p><p data-en>Separates forefoot from the hindfoot calcaneal compartment while preserving approach differences and the lack of consensus.</p><div class="module-actions"><a href="fasciotomy-atlas/foot-fasciotomy/index.html" data-zh>进入模块 ↗</a><a href="fasciotomy-atlas/foot-fasciotomy/index.html" data-en>Open module ↗</a><a class="source" href="https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/further-reading/compartment-syndrome-foot" target="_blank" rel="noreferrer">AO source ↗</a></div></div></article>
       </div>
     </section>
 
-    <section id="method" class="method-section">
-      <div class="anatomy-orbit" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core"><span>3D</span><small>ANATOMY</small></div><b class="node n1">01</b><b class="node n2">02</b><b class="node n3">03</b></div>
-      <div class="method-copy">
-        <p class="section-number">03 — <span data-zh="教学设计" data-en="TEACHING DESIGN">教学设计</span></p>
-        <h2 data-zh="看见路径，也看见风险。" data-en="See the path—and the risk.">看见路径，也看见风险。</h2>
-        <ol>
-          <li><b data-zh="参考解剖" data-en="Reference anatomy">参考解剖</b><span data-zh="旋转、缩放并切换视角，先建立骨性标志与空间关系。" data-en="Rotate, zoom, and change views to establish landmarks and spatial relationships.">旋转、缩放并切换视角，先建立骨性标志与空间关系。</span></li>
-          <li><b data-zh="风险教学" data-en="Risk teaching">风险教学</b><span data-zh="动脉红、静脉蓝、神经黄；被骨遮挡的结构自动虚化，减少视觉干扰。" data-en="Arteries are red, veins blue, nerves yellow; structures behind bone fade automatically to reduce visual clutter.">动脉红、静脉蓝、神经黄；被骨遮挡的结构自动虚化，减少视觉干扰。</span></li>
-          <li><b data-zh="明确边界" data-en="Clear limits">明确边界</b><span data-zh="参数用于教学参照，临床决策仍须结合个体影像、器械说明和本机构规范。" data-en="Parameters are teaching references; clinical decisions require patient imaging, device instructions, and local protocols.">参数用于教学参照，临床决策仍须结合个体影像、器械说明和本机构规范。</span></li>
-        </ol>
-      </div>
-    </section>
+    <section class="teacher-kit" aria-labelledby="kit-title"><div><p class="eyebrow">READY FOR THE CLASSROOM</p><h2 id="kit-title" data-zh>教师可以直接带走</h2><h2 data-en>Ready for the classroom</h2><p data-zh>每次讲授都可以从同一组问题开始：看见了什么？下一步如何进入？哪些结构必须保护？哪些结论需要影像、个体评估或临床复核？</p><p data-en>Start every lesson with the same questions: what is visible, how do we enter, what must be protected, and which conclusions still require imaging, patient-specific assessment or clinical review?</p></div><div class="kit-items"><div class="kit-item"><strong data-zh>三维演示</strong><strong data-en>3D demo</strong><small data-zh>小腿分层试验页</small><small data-en>Layered leg pilot</small></div><div class="kit-item"><strong data-zh>风险清单</strong><strong data-en>Risk list</strong><small data-zh>神经、动脉、静脉分层</small><small data-en>Layered nerve and vessel cues</small></div><div class="kit-item"><strong data-zh>来源回查</strong><strong data-en>Source trail</strong><small data-zh>AO、AAOS、BOASt、WFNS</small><small data-en>AO, AAOS, BOASt, WFNS</small></div><div class="kit-item"><strong data-zh>双语讲授</strong><strong data-en>Bilingual teaching</strong><small data-zh>中文与 English 一键切换</small><small data-en>Switch Chinese and English instantly</small></div></div></section>
 
-    <section id="evidence" class="evidence-section">
-      <div><p class="section-number">04 — <span data-zh="依据与边界" data-en="EVIDENCE & LIMITS">依据与边界</span></p><h2 data-zh="来源可追溯，结论有边界。" data-en="Traceable sources, bounded conclusions.">来源可追溯，结论有边界。</h2></div>
-      <div class="evidence-copy">
-        <p data-zh="操作框架参考 AO Surgery Reference、AO Spine / Praxis、WFNS、AAOS 与 BOASt 等权威资源；各模块列出来源、访问日期及适用限制。" data-en="Procedural frameworks draw on authoritative resources including AO Surgery Reference, AO Spine / Praxis, WFNS, AAOS, and BOASt. Each module lists sources, access dates, and limits.">操作框架参考 AO Surgery Reference、AO Spine / Praxis、WFNS、AAOS 与 BOASt 等权威资源；各模块列出来源、访问日期及适用限制。</p>
-        <p class="boundary" data-zh="本项目为独立教学改编，不代表上述机构的官方制作、推荐或认证；不替代规范培训、患者评估、影像引导或术者判断。资料核对：2026-09-08。" data-en="This is an independent educational adaptation and is not produced, endorsed, or certified by those organizations. It does not replace formal training, patient assessment, image guidance, or clinician judgment. Sources checked 2026-09-08.">本项目为独立教学改编，不代表上述机构的官方制作、推荐或认证；不替代规范培训、患者评估、影像引导或术者判断。资料核对：2026-09-08。</p>
-      </div>
-    </section>
+    <section class="section-block" id="evidence" aria-labelledby="evidence-title"><div class="section-intro"><div><p class="eyebrow">EVIDENCE & LIMITS</p><h2 id="evidence-title" data-zh>来源可追溯，结论有边界。</h2><h2 data-en>Traceable sources, bounded conclusions.</h2></div><p data-zh>真实医学内容只从公开权威来源和模块证据文件进入页面；不把示意结构、软件验证或 AI 辅助写成临床认证。</p><p data-en>Medical content is tied to public authoritative sources and module evidence files; schematics, software checks and AI assistance are not presented as clinical certification.</p></div><div class="notice"><strong data-zh>使用边界</strong><strong data-en>Use boundary</strong><span data-zh>本项目为独立教学改编，图形为关系示意或非比例三维分层，不能替代患者评估、影像引导、器械说明、规范培训或术者判断。足部筋膜室管理保留共识不足提示；筋膜室综合征页面不把一次测压或单一阈值写成自动手术指令。</span><span data-en>This is an independent educational adaptation. Relational drawings and non-proportional 3D layers do not replace patient assessment, imaging, device instructions, formal training or clinician judgment. Foot compartment management remains bounded by limited consensus; compartment-pressure values are not automatic operative instructions.</span></div><p class="boundary" data-zh>主要来源：<a href="https://www.aaos.org/acscpg2025" target="_blank" rel="noreferrer">AAOS 2025</a>、<a href="https://www.boa.ac.uk/resource/boast-10-pdf.html" target="_blank" rel="noreferrer">BOASt</a>、<a href="https://surgeryreference.aofoundation.org/" target="_blank" rel="noreferrer">AO Surgery Reference</a>、<a href="https://wfns-spine.org/pdf/Recom-Cervical-Spine-Trauma.pdf" target="_blank" rel="noreferrer">WFNS</a>；模块证据见 <a href="fasciotomy-atlas/research/EVIDENCE.md">fasciotomy evidence</a> 与 <a href="neurovascular-v2/README.md">neurovascular V2 notes</a>。</p><p class="boundary" data-en>Core sources: <a href="https://www.aaos.org/acscpg2025" target="_blank" rel="noreferrer">AAOS 2025</a>, <a href="https://www.boa.ac.uk/resource/boast-10-pdf.html" target="_blank" rel="noreferrer">BOASt</a>, <a href="https://surgeryreference.aofoundation.org/" target="_blank" rel="noreferrer">AO Surgery Reference</a> and <a href="https://wfns-spine.org/pdf/Recom-Cervical-Spine-Trauma.pdf" target="_blank" rel="noreferrer">WFNS</a>. Module evidence: <a href="fasciotomy-atlas/research/EVIDENCE.md">fasciotomy evidence</a> and <a href="neurovascular-v2/README.md">neurovascular V2 notes</a>.</p></section>
   </main>
-
-  <footer>
-    <div><strong>ORTHOPAEDIC TRAUMA ATLAS</strong><span data-zh="骨科创伤操作教学图谱" data-en="Interactive procedural teaching atlas">骨科创伤操作教学图谱</span></div>
-    <p data-zh="解剖网格源于 BodyParts3D；完整署名与许可见仓库文件。" data-en="Anatomical meshes derive from BodyParts3D; see the repository for full attribution and licensing.">解剖网格源于 BodyParts3D；完整署名与许可见仓库文件。</p>
-    <a href="https://github.com/TUANZIDING/orthopaedic-trauma-atlas" target="_blank" rel="noreferrer">GitHub ↗</a>
-  </footer>
-  <script src="assets/home/home.js"></script>
+  <footer class="site-footer"><span data-zh>7 个模块 · 4K 教学图 · 本地制作版 · V2.2</span><span data-en>7 modules · 4K teaching plates · Local build · V2.2</span><nav aria-label="Footer navigation"><a href="README.md" data-zh>维护说明</a><a href="README.md" data-en>Maintenance</a><a href="https://github.com/TUANZIDING/orthopaedic-trauma-atlas" target="_blank" rel="noreferrer">GitHub ↗</a></nav></footer>
+  <script>
+    const toggle=document.getElementById('languageToggle');
+    function setLanguage(language){const english=language==='en';document.body.classList.toggle('is-en',english);document.documentElement.lang=english?'en':'zh-CN';toggle.textContent=english?'中文':'English';toggle.setAttribute('aria-label',english?'切换到中文':'Switch to English');try{localStorage.setItem('atlas-language',english?'en':'zh')}catch(_){} }
+    toggle.addEventListener('click',()=>setLanguage(document.body.classList.contains('is-en')?'zh':'en'));
+    let saved='zh';try{saved=localStorage.getItem('atlas-language')||'zh'}catch(_){}setLanguage(saved);
+  </script>
 </body>
 </html>
